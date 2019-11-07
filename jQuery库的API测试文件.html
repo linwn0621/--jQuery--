@@ -45,13 +45,17 @@
         // console.log(jQuery);
         // console.log($ === jQuery);
 
-        // new Init('input')
-        // $('input')
-        
+        // new Init('input')   // 之前的写法
+        // $('input')          // jQuery 写法，其实是 $ 函数内部调用了 new Init()
+
         console.log($);
         console.log(jQuery);
         console.log($ === jQuery);
-        
+
+        // $ 函数内部调用了 new Init()，内部返回 new 出来的实例
+        const $input = $('input');
+        console.log($input);
+
     </script>
 </body>
 
