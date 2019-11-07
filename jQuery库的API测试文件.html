@@ -60,9 +60,16 @@
         const $div = $('div');
         console.log($div);
 
-        debugger;
         // $div.addClass('abc').addClass('abcccc');
         $div.removeClass('one').toggleClass('two');
+
+
+        debugger;
+        $div.each(function (index, item) {
+            console.log('index代表每个索引', index);
+            console.log('item代表每个DOM元素', item);
+            console.log('内部的 this===item', item === this);
+        });
 
     </script>
 </body>
